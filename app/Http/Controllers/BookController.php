@@ -13,7 +13,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return Book::last()->get();
+        return Book::with('author')->last()->get();
     }
 
     /**
